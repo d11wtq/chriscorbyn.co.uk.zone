@@ -35,6 +35,19 @@
           "30 ASPMX5.GOOGLEMAIL.COM."
         ]
       }
+    },
+
+    "spfRecord": {
+      "Type": "AWS::Route53::RecordSet",
+      "Properties": {
+        "HostedZoneId": {"Ref": "zone"},
+        "Name": {"Fn::Join": ["", [{"Ref": "name"}, "."]]},
+        "TTL": "600",
+        "Type": "TXT",
+        "ResourceRecords": [
+          "\"v=spf1 a mx mx:googlemail.com ~all\""
+        ]
+      }
     }
   }
 }
