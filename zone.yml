@@ -1,0 +1,17 @@
+description: Hosted Zone for chriscorbyn.co.uk
+
+zone: chriscorbyn.co.uk
+
+domains:
+  chriscorbyn.co.uk:
+    A: {alias: {name: "1.www.chriscorbyn.co.uk"}}
+    MX:
+      ttl: 3600
+      records:
+        - "1  ASPMX.L.GOOGLE.COM"
+        - "5  ALT1.ASPMX.L.GOOGLE.COM"
+        - "5  ALT2.ASPMX.L.GOOGLE.COM"
+        - "10 ALT3.ASPMX.L.GOOGLE.COM"
+        - "10 ALT4.ASPMX.L.GOOGLE.COM"
+  www.chriscorbyn.co.uk:
+    CNAME: {records: ["chriscorbyn.co.uk"]}
